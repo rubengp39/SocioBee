@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Login Form Example</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
+  <link rel="stylesheet" href="{% static '/css/loginStyle.css' %}">
+  <link rel="stylesheet" href="{% static '/css/main.css' %}">
+
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <a href="index.html"><img src="{% static 'images/SOCIO-BEE-Logo.png' %}" alt="SOCIO-BEE-Logo" class="navbar_logo"></a>
+        
+
+        <nav class="navbar_buttons">
+            <ul>
+                <li><a href="{% url 'index' %}" >Inicio</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="{% url 'campaigns' %}">Campañas</a></li>
+                <li><a href="{% url 'login' %}" class="navbar_buttons_active">Cuenta</a></li>
+                <li><select name="language" id="language" class="navbar_buttons_selector">
+                    <option value="1">ESP</option> <!-- Probar añadiendo banderas &#x1f1ea;&#x1f1f8;-->
+                    <option value="2">GR</option>
+                    <option value="3">ITA</option>
+                    <option value="4">ENG</option>
+                </select></li>
+            </ul>
+        </nav>
+    </div>
+  </header>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form>
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="email" placeholder="Email" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input type="password" placeholder="Contraseña" autocomplete="new-password">
+      </div>
+      <a href="#" class="link">¿Olvidaste la contraseña?</a>
+    </div>
+    <div class="action">
+      <button>Registrarse</button>
+      <button>Iniciar Sesión</button>
+    </div>
+  </form>
+</div>
+<!-- partial -->
+  <script  src="{% static '/js/loginScript.js'%}"></script>
+
+</body>
+</html>

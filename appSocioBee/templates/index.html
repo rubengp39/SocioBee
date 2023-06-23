@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html"><img src="{% static 'images/SOCIO-BEE-Logo.png' %}" alt="SOCIO-BEE-Logo" class="navbar_logo"></a>
+            
+
+            <nav class="navbar_buttons">
+                <ul>
+                    <li><a href="{% url 'index' %}" class="navbar_buttons_active">Inicio</a></li>
+                    <li><a href="about.html">Sobre nosotros</a></li>
+                    <li><a href="{% url 'campaigns' %}">Campañas</a></li>
+                    <li><a href="{% url 'login' %}">Cuenta</a></li>
+                    <li><select name="language" id="language" class="navbar_buttons_selector">
+                        <option value="1">ESP</option> <!-- Probar añadiendo banderas &#x1f1ea;&#x1f1f8;-->
+                        <option value="2">GR</option>
+                        <option value="3">ITA</option>
+                        <option value="4">ENG</option>
+                    </select></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="row">
+            <div class="row_col_2">
+                <div class="row_col_2_text">
+                    <h1>Wearables and droneS fOr CIty Socio-Environmental Observations and BEhavioral ChangE</h1>
+                    <a href="campaignDashBoard.html" class="button">Descubre las campañas &#8594;</a>
+                </div>
+            </div>
+            <div class="row_col_2">
+                <img src="{% static 'images/c1.png' %}" alt="" class="slides">
+                <img src="{% static 'images/c2.png' %}" alt="" class="slides">
+                <img src="{% static 'images/c3.png' %}" alt="" class="slides">
+                <img src="{% static 'images/c4.png' %}" alt="" class="slides">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="categories">
+            <div class="container">
+                <div class="row">
+                    <img src="{% static 'images/SocioBee.png' %}" alt="SocioBee">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Sobre nosotros</h2>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer_col_1">
+                    <img src="{% static 'images/SOCIO-BEE-Logo.png' %}" alt="web logo">
+                </div>
+                <div class="footer_col_2">
+                    <h2>Contáctame</h2>
+                    <ul>
+                        <li>Blog</li>
+                        <li>Sobre mi</li>
+                        <li>Envíos</li>
+                        <li>Términos y Condiciones</li>
+                    </ul>
+                </div>
+                <div class="footer_col_3">
+                    <h2>Redes sociales</h2>
+                    <ul>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright© 2023 <a href="https://www.linkedin.com/in/rubén-garcía-pedrejón-846235194/" target="_blank"> Rubén García</a></p>
+    </footer>
+
+    <script src="{% static '/js/slides.js' %}"></script>
+</body>
+
+
+</html>

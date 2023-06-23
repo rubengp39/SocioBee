@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaigns</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/sidebar.css' %}">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html"><img src="{% static 'images/SOCIO-BEE-Logo.png' %}" alt="SOCIO-BEE-Logo" class="navbar_logo"></a>
+            
+
+            <nav class="navbar_buttons">
+                <ul>
+                    <li><a href="{% url 'index' %}" >Inicio</a></li>
+                    <li><a href="about.html">Sobre nosotros</a></li>
+                    <li><a href="{% url 'campaigns' %}" class="navbar_buttons_active">Campañas </a></li>
+                    <li><a href="{% url 'login' %}">Cuenta</a></li>
+                    <li><select name="language" id="language" class="navbar_buttons_selector">
+                        <option value="1">ESP</option> <!-- Probar añadiendo banderas &#x1f1ea;&#x1f1f8;-->
+                        <option value="2">GR</option>
+                        <option value="3">ITA</option>
+                        <option value="4">ENG</option>
+                    </select></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+      
+    <div class="container">
+        <div class="sidebar">
+            <h2 class="sidebar-title">Campañas</h2>
+            <a href="{% url 'campaigns' %}" class="btn">Actuales</a>
+            <a href="{% url 'campaignCreation' %}" class="btn">Crear</a>
+<!--             <a href="{% url 'campaignCreation' %}" class="btn">Historial</a>
+            <a href="{% url 'campaignCreation' %}" class="btn">Perfil</a> -->
+        </div>
+      
+      <div id="map"></div>
+
+      <div id="form">
+        <h2>Calidad del aire</h2>
+        <form id="dataForm">
+            <label for="position">Posición:</label>
+            <input type="text" id="position" name="position" required readonly>
+            <br>
+            <label for="no2">NO2:</label>
+            <input type="number" id="no2" name="no2" required>
+            <br>
+
+            <label for="co2">CO2:</label>
+            <input type="number" id="co2" name="co2" required>
+            <br>
+
+            <label for="o3">O3:</label>
+            <input type="number" id="o3" name="o3" required>
+            <br>
+
+            <label for="so2">SO2:</label>
+            <input type="number" id="so2" name="so2" required>
+            <br>
+
+            <label for="pm10">PM10:</label>
+            <input type="number" id="pm10" name="pm10" required>
+            <br>
+
+            <label for="pm25">PM2.5:</label>
+            <input type="number" id="pm25" name="pm25" required>
+            <br>
+
+            <label for="pm1">PM1:</label>
+            <input type="number" id="pm1" name="pm1" required>
+            <br>
+
+            <label for="benzene">Benzene:</label>
+            <input type="number" id="benzene" name="benzene" required>
+            <br>
+
+            <input type="submit" value="Enviar">
+        </form>
+      </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+      <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+      <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+      <script src="{% static '/js/map.js' %}"></script>
+      <script src="{% static '/js/geoData/gridDivision.js' %}" type="module"></script>
+      <script src="{% static '/js/geoData/coordinates.js' %}" type="module"></script>
+      <script src="{% static '/js/geoData/savedSquare.js' %}" type="module"></script>
+    </body>
+</html>

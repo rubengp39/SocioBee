@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    height: calc(100vh - 60px);
+  }
+  
+  .queen-bee-form-container {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f1f1a1;
+  }
+  
+  .form-title {
+    margin-bottom: 20px;
+    color: #05445E;
+  }
+  
+  .queen-bee-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .queen-bee-form label {
+    display: block;
+    font-weight: bold;
+    color: #05445E;
+  }
+  
+  .queen-bee-form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .queen-bee-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e09900;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .queen-bee-form button:hover {
+    background-color: #cc8d03;
+  }

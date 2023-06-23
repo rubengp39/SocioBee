@@ -8,10 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" type="text/css" href="{% static '/css/sidebar.css' %}">
+
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="{% static '/map.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static '/form.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 
 
 
@@ -19,34 +21,67 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="left">
-            <div class="header">
-                <h2 class="animation a1">Queen Bee</h2>
-                <h4 class="animation a2">Crea una campaña</h4>
-            </div>
-            <div class="form">
-                <input type="text" class="form-field animation a3" placeholder="Ciudad">
-                <input type="text" class="form-field animation a4" placeholder="Duración">
-                <input type="date" class="form-field animation a4" placeholder="Fecha de Inicio">
-                <!--                 <fieldset>Min de muestras
-                    <div><input type="radio" class="form-field animation a4" value="8"></div>
-                    <div><input type="radio" class="form-field animation a4" value="10"></div>
-                    <div><input type="radio" class="form-field animation a4" value="12"></div>
-                </fieldset> -->
+<header>
+    <div class="navbar">
+        <a href="index.html"><img src="{% static 'images/SOCIO-BEE-Logo.png' %}" alt="SOCIO-BEE-Logo" class="navbar_logo"></a>
+        
 
-                <!--<p class="animation a5"><a href="#">Forgot Password</a></p>-->
-                <button class="animation a6">Crear</button>
-            </div>
-        </div>
-        <div class="right"></div>
-        <div id="map"></div>
+        <nav class="navbar_buttons">
+            <ul>
+                <li><a href="{% url 'index' %}" >Inicio</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="{% url 'campaigns' %}" class="navbar_buttons_active">Campañas </a></li>
+                <li><a href="{% url 'login' %}">Cuenta</a></li>
+                <li><select name="language" id="language" class="navbar_buttons_selector">
+                    <option value="1">ESP</option> <!-- Probar añadiendo banderas &#x1f1ea;&#x1f1f8;-->
+                    <option value="2">GR</option>
+                    <option value="3">ITA</option>
+                    <option value="4">ENG</option>
+                </select></li>
+            </ul>
+        </nav>
+
     </div>
+</header>
 
+<div class="container">
+    <div class="sidebar">
+      <h2 class="sidebar-title">Campañas</h2>
+      <a href="{% url 'campaigns' %}" class="btn">Actuales</a>
+      <a href="{% url 'campaignCreation' %}" class="btn">Crear</a>
+<!--       <a href="{% url 'campaignCreation' %}" class="btn">Historial</a>
+      <a href="{% url 'campaignCreation' %}" class="btn">Perfil</a> -->
+    </div>
+  
+    <div id="map"></div>
+  
+    <div id="form">
+      <h2>Crear Campaña</h2>
+      <form id="dataForm">
+          <label for="title">Título:</label>
+          <input type="text" id="title" name="title" required>
+          <br>
 
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
-    <script src="{% static '/queenMap.js' %}"></script>
+          <label for="description">Descripción:</label>
+          <input type="text" id="description" name="description">
+          <br>
+
+          <label for="endDate">Fecha de Fin:</label>
+          <input type="date" id="endDate" name="endDate" required>
+          <br>
+
+          <input type="submit" value="Enviar">
+      </form>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+    <script src="{% static '/js/map.js' %}"></script>
+    <script src="{% static '/js/geoData/draw.js' %}" type="module"></script>
+    <script src="{% static '/js/geoData/coordinates.js' %}" type="module"></script>
+    <script src="{% static '/js/geoData/savedSquare.js' %}" type="module"></script>
 </body>
 
 </html>

@@ -62,6 +62,44 @@ ul {
   .navbar_buttons_selector:focus {
     outline: none;
   }
+
+  .language_form form {
+    display: flex;
+    align-items: center;
+}
+
+.language_form select {
+    border: 1px solid #05445E;
+    padding: 3px;
+}
+
+.language_form select:focus {
+    outline: none;
+}
+
+.language_form input[type="submit"] {
+    background-color: #e09900;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .language_form input[type="submit"]:hover {
+    background-color: #d18600;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: #e09900;
+    color: #ffffff;
+    padding: 10px 26px;
+    margin: 20px 0;
+    border-radius: 20px;
+  }
   
   .navbar_checkout {
     width: 25px;

@@ -1,17 +1,28 @@
 from django.http import HttpResponse, Http404
-from django.shortcuts import get_object_or_404, get_list_or_404, render
+from django.shortcuts import get_object_or_404, get_list_or_404, render, redirect
 from .models import *
 from django.views.decorators.csrf import csrf_exempt
+
+from django.utils import translation
+from django.utils.translation import gettext_lazy as _
 
 import os
 import json
 
 def index(request):
-    queenBees = get_list_or_404(QueenBee.objects.order_by('name'))
-    context = {'lista_QueenBees': queenBees }
-    return render(request, 'campaignCreation.html', context)
+    # user_language = 'es'
+    # translation.activate(user_language)
+    #if translation.LANGUAGE_SESSION_KEY in request.session:
+    #    del request.session[translation.LANGUAGE_SESSION_KEY]
+    return render(request, 'campaignCreation.html')
 
 def index(request):
+    if request.method == 'POST':
+        language = request.POST.get('language')
+        translation.activate(language)
+        request.session[translation.LANGUAGE_SESSION_KEY] = language
+        return redirect(request.POST.get('next', '/'))
+    
     return render(request, 'index.html')
 
 def login(request):

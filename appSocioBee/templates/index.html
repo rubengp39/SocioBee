@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 {% load static %}
+{% load i18n %}
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +17,6 @@
     <header>
         <div class="navbar">
             <a href="index.html"><img src="{% static 'images/SOCIO-BEE-Logo.png' %}" alt="SOCIO-BEE-Logo" class="navbar_logo"></a>
-            
 
             <nav class="navbar_buttons">
                 <ul>
@@ -24,12 +24,29 @@
                     <li><a href="about.html">Sobre nosotros</a></li>
                     <li><a href="{% url 'campaigns' %}">Campañas</a></li>
                     <li><a href="{% url 'login' %}">Cuenta</a></li>
-                    <li><select name="language" id="language" class="navbar_buttons_selector">
-                        <option value="1">ESP</option> <!-- Probar añadiendo banderas &#x1f1ea;&#x1f1f8;-->
-                        <option value="2">GR</option>
-                        <option value="3">ITA</option>
-                        <option value="4">ENG</option>
-                    </select></li>
+                    <li class="language_form">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <form id="language-form" action="{% url 'set_language' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="next" value="{{ redirect_to }}">
+                            <select name="language" id="language-select">
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                                        {{ language.name_local}} {{language.code}}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <script>
+                                document.getElementById('language-select').addEventListener('change', function() {
+                                    document.getElementById('language-form').submit();
+                                });
+                            </script>
+                        </form>
+
+                        
+                    </li>
                 </ul>
             </nav>
 
@@ -60,6 +77,8 @@
         </div>
         <div class="container">
             <h2>Sobre nosotros</h2>
+            {% trans " Test " %} 
+            <h1>{{ title }}</h1>
             
         </div>
 

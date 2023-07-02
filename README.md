@@ -1,8 +1,19 @@
 # SocioBee
 
+# Despliegue
+1. Leer en [MVE Recommender System](https://github.com/mpuerta004/RecommenderSystem) como desplegar el backend.
+2. `git clone https://github.com/rubengp39/SocioBee`
+3. `cd SocioBee`
+4. `python manage.py runserver`
+5. Navega a [127.0.0.1/AppSocioBee](http://127.0.0.1:8000/appSocioBee/)
+
+
+# Preview
+
+[YouTube](https://www.youtube.com/watch?v=4NLH5Jg5jRg)
 # Tipo de datos de cells
 
-## Actual
+## Pasado
 ### Llamada a la api
 
 http://localhost:7777/surfaces/?latX=43.3167&longX=2.9466&latY=43.3443&longY=3&distance=1000

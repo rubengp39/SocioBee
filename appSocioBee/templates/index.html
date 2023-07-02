@@ -20,10 +20,10 @@
 
             <nav class="navbar_buttons">
                 <ul>
-                    <li><a href="{% url 'index' %}" class="navbar_buttons_active">Inicio</a></li>
-                    <li><a href="about.html">Sobre nosotros</a></li>
-                    <li><a href="{% url 'campaigns' %}">Campañas</a></li>
-                    <li><a href="{% url 'login' %}">Cuenta</a></li>
+                    <li><a href="{% url 'index' %}" class="navbar_buttons_active"> {% trans " Home " %}</a></li>
+                    <li><a href="about.html">{% trans " About Us " %}</a></li>
+                    <li><a href="{% url 'campaigns' %}">{% trans " Campaigns " %}</a></li>
+                    <li><a href="{% url 'login' %}">{% trans " Account " %}</a></li>
                     <li class="language_form">
                         {% get_current_language as LANGUAGE_CODE %}
                         <form id="language-form" action="{% url 'set_language' %}" method="POST">
@@ -55,7 +55,7 @@
             <div class="row_col_2">
                 <div class="row_col_2_text">
                     <h1>Wearables and droneS fOr CIty Socio-Environmental Observations and BEhavioral ChangE</h1>
-                    <a href="campaignDashBoard.html" class="button">Descubre las campañas &#8594;</a>
+                    <a href="campaigns.html" class="button">{% trans " Discover all the campaigns " %} &#8594;</a>
                 </div>
             </div>
             <div class="row_col_2">
@@ -76,10 +76,19 @@
             </div>
         </div>
         <div class="container">
-            <h2>Sobre nosotros</h2>
-            {% trans " Test " %} 
-            <h1>{{ title }}</h1>
-            
+            <h2> {% trans " About Us " %} </h2>
+            <div class="row_col_2">
+                <div class="row_col_2_text">
+                <img src="{% static 'images/about_us_image.png' %}" alt="AboutUS">
+                
+            <p>{% trans " Welcome to SOCIO-BEE! " %} </p>
+            <p>{% trans " We aim at empowering communities to adopt more sustainable behaviors. " %} </p>
+            <p>{% trans " How do we do that?  " %} </p>
+            <p>{% trans " Through citizen science, portable air quality sensors, and social innovation. " %} </p>
+            <p>{% trans " Our project also raises awareness of climate change and encourages citizens to monitor and observe the environment. " %} </p>
+            <p>{% trans " Join us on this journey to create a healthier, more sustainable future! " %} </p>
+        </div>
+        </div>
         </div>
 
     </main>
@@ -91,16 +100,15 @@
                     <img src="{% static 'images/SOCIO-BEE-Logo.png' %}" alt="web logo">
                 </div>
                 <div class="footer_col_2">
-                    <h2>Contáctame</h2>
+                    <h2>{% trans " Contact " %}</h2>
                     <ul>
-                        <li>Blog</li>
-                        <li>Sobre mi</li>
-                        <li>Envíos</li>
-                        <li>Términos y Condiciones</li>
+                        <li>{% trans " Blog " %}</li>
+                        <li>{% trans " About Me " %}</li>
+                        <li>{% trans " Terms and Conditions " %}</li>
                     </ul>
                 </div>
                 <div class="footer_col_3">
-                    <h2>Redes sociales</h2>
+                    <h2>Social</h2>
                     <ul>
                         <li>Twitter</li>
                         <li>Instagram</li>

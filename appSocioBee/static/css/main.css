@@ -140,6 +140,11 @@ header {
     margin-left: 70px;
 }
 
+.row_col_2_text img {
+    float: left;
+    margin-right: 20px;
+}
+
 .row_col_2 h1 {
     font-size: 50px;
     margin: 40px 0;
@@ -490,4 +495,13 @@ th:last-child {
     transform: translateX(100px);
     height: 3px;
     transition: 1s;
+}
+
+
+.container h2,
+.container p {
+  color: #000000;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

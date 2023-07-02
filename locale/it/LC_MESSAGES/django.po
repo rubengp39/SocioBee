@@ -20,56 +20,56 @@ msgstr ""
 
 #: .\appSocioBee\templates\index.html:23
 msgid " Home "
-msgstr " Inicio "
+msgstr " Inizio "
 
 #: .\appSocioBee\templates\index.html:24 .\appSocioBee\templates\index.html:80
 msgid " About Us "
-msgstr " Sobre Nosotros "
+msgstr " Chi siamo "
 
 #: .\appSocioBee\templates\index.html:25
 msgid " Campaigns "
-msgstr " Campañas "
+msgstr " Campagne "
 
 #: .\appSocioBee\templates\index.html:26
 msgid " Account "
-msgstr "Cuenta "
+msgstr " Conto "
 
 #: .\appSocioBee\templates\index.html:58
 msgid " Discover all the campaigns "
-msgstr " Descubrre todas las campañas "
+msgstr " Scopri tutte le campagne "
 
 #: .\appSocioBee\templates\index.html:81
 msgid " Welcome to SOCIO-BEE! "
-msgstr " ¡Bienvenido a SOCIO-BEE! "
+msgstr " Benvenuto in SOCIO-BEE! "
 
 #: .\appSocioBee\templates\index.html:82
 msgid " We aim at empowering communities to adopt more sustainable behaviors. "
-msgstr " Nuestro proyecto pretende aunar comunidades, ciencia ciudadana e innovación social para hacer del mundo un lugar mejor. "
+msgstr " Vogliamo consentire alle comunità di adottare comportamenti più sostenibili. "
 
 #: .\appSocioBee\templates\index.html:83
 msgid " How do we do that?  "
-msgstr " ¿Comó lo hacemos? "
+msgstr " Come possiamo farlo? "
 
 #: .\appSocioBee\templates\index.html:84
 msgid ""
 " Through citizen science, portable air quality sensors, and social "
 "innovation. "
-msgstr " Utilizando las últimas tecnologías y haciendo las cosas divertidas, creemos que podemos ayudar a la gente a adoptar comportamientos sostenibles y reducir la contaminación atmosférica. "
+msgstr " Lo facciamo con la citizen science, i sensori portatili per la qualità dell’aria e l’innovazione sociale. "
 
 #: .\appSocioBee\templates\index.html:85
 msgid ""
 " Our project also raises awareness of climate change and encourages citizens "
 "to monitor and observe the environment. "
-msgstr " Nuestro proyecto también sensibiliza sobre el cambio climático y anima a los ciudadanos a vigilar y observar el medio ambiente. "
+msgstr " Il nostro progetto aumenta anche la consapevolezza del cambiamento climatico e incoraggia i cittadini a monitorare e osservare l’ambiente. "
 
 #: .\appSocioBee\templates\index.html:86
 msgid ""
 " Join us on this journey to create a healthier, more sustainable future! "
-msgstr " ¡Únete a nosotros en este viaje para crear un futuro más sano y sostenible! "
+msgstr " Unisciti a noi in questo viaggio per creare un futuro più sano e più sostenibile!! "
 
 #: .\appSocioBee\templates\index.html:99
 msgid " Contact "
-msgstr " Contacto "
+msgstr " Contatto "
 
 #: .\appSocioBee\templates\index.html:101
 msgid " Blog "
@@ -77,11 +77,8 @@ msgstr " Blog "
 
 #: .\appSocioBee\templates\index.html:102
 msgid " About Me "
-msgstr " Sobre mi "
+msgstr " Su di me "
 
 #: .\appSocioBee\templates\index.html:103
 msgid " Terms and Conditions "
-msgstr " Términos y Condiciones "
-
-#~ msgid " Test "
-#~ msgstr "Prueba"
+msgstr " Termini e condizioni "

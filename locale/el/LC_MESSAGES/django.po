@@ -20,56 +20,55 @@ msgstr ""
 
 #: .\appSocioBee\templates\index.html:23
 msgid " Home "
-msgstr " Inicio "
+msgstr " αρχική "
 
 #: .\appSocioBee\templates\index.html:24 .\appSocioBee\templates\index.html:80
 msgid " About Us "
-msgstr " Sobre Nosotros "
+msgstr " Σχετικά με εμάς "
 
 #: .\appSocioBee\templates\index.html:25
 msgid " Campaigns "
-msgstr " Campañas "
+msgstr " Εκστρατείες "
 
 #: .\appSocioBee\templates\index.html:26
 msgid " Account "
-msgstr "Cuenta "
+msgstr " Λογαριασμός "
 
 #: .\appSocioBee\templates\index.html:58
 msgid " Discover all the campaigns "
-msgstr " Descubrre todas las campañas "
+msgstr " Ανακαλύψτε όλες τις καμπάνιες "
 
 #: .\appSocioBee\templates\index.html:81
 msgid " Welcome to SOCIO-BEE! "
-msgstr " ¡Bienvenido a SOCIO-BEE! "
+msgstr " Καλώς ήρθατε στο SOCIO-BEE! "
 
 #: .\appSocioBee\templates\index.html:82
 msgid " We aim at empowering communities to adopt more sustainable behaviors. "
-msgstr " Nuestro proyecto pretende aunar comunidades, ciencia ciudadana e innovación social para hacer del mundo un lugar mejor. "
+msgstr " Θέλουμε να ενδυναμώσουμε τις κοινότητες ώστε να υιοθετήσουν πιο βιώσιμες συμπεριφορές. "
 
 #: .\appSocioBee\templates\index.html:83
 msgid " How do we do that?  "
-msgstr " ¿Comó lo hacemos? "
+msgstr " Πώς το κάνουμε αυτό; "
 
 #: .\appSocioBee\templates\index.html:84
 msgid ""
 " Through citizen science, portable air quality sensors, and social "
 "innovation. "
-msgstr " Utilizando las últimas tecnologías y haciendo las cosas divertidas, creemos que podemos ayudar a la gente a adoptar comportamientos sostenibles y reducir la contaminación atmosférica. "
-
+msgstr " Το κάνουμε με την επιστήμη των πολιτών, φορητούς αισθητήρες ποιότητας αέρα και κοινωνική καινοτομία. "
 #: .\appSocioBee\templates\index.html:85
 msgid ""
 " Our project also raises awareness of climate change and encourages citizens "
 "to monitor and observe the environment. "
-msgstr " Nuestro proyecto también sensibiliza sobre el cambio climático y anima a los ciudadanos a vigilar y observar el medio ambiente. "
+msgstr " Επίσης, το έργο μας αυξάνει την ευαισθητοποίηση για την κλιματική αλλαγή και ενθαρρύνει τους πολίτες να παρακολουθούν και να παρατηρούν το περιβάλλον. "
 
 #: .\appSocioBee\templates\index.html:86
 msgid ""
 " Join us on this journey to create a healthier, more sustainable future! "
-msgstr " ¡Únete a nosotros en este viaje para crear un futuro más sano y sostenible! "
+msgstr " Ελάτε μαζί μας σε αυτό το ταξίδι για να δημιουργήσουμε ένα πιο υγιές και βιώσιμο μέλλον! "
 
 #: .\appSocioBee\templates\index.html:99
 msgid " Contact "
-msgstr " Contacto "
+msgstr " Επικοινωνία "
 
 #: .\appSocioBee\templates\index.html:101
 msgid " Blog "
@@ -77,11 +76,8 @@ msgstr " Blog "
 
 #: .\appSocioBee\templates\index.html:102
 msgid " About Me "
-msgstr " Sobre mi "
+msgstr " Σχετικά με εμένα "
 
 #: .\appSocioBee\templates\index.html:103
 msgid " Terms and Conditions "
-msgstr " Términos y Condiciones "
-
-#~ msgid " Test "
-#~ msgstr "Prueba"
+msgstr " Όροι και Προϋποθέσεις "

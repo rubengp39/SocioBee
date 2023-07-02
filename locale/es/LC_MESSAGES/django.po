@@ -36,7 +36,7 @@ msgstr "Cuenta "
 
 #: .\appSocioBee\templates\index.html:58
 msgid " Discover all the campaigns "
-msgstr " Descubrre todas las campañas "
+msgstr " Descubre todas las campañas "
 
 #: .\appSocioBee\templates\index.html:81
 msgid " Welcome to SOCIO-BEE! "
